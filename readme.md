@@ -1,9 +1,11 @@
 This is an alternative launcher / mod manager for the game XCOM 2.
 
 # Links
-[Latest Release](https://github.com/X2CommunityCore/xcom2-launcher/releases/latest)
+[Latest Release](https://github.com/Xebeth/xcom2-launcher/releases/latest)
 
 [Screenshots (Slightly Outdated)](http://imgur.com/a/8EoW9)
+
+![Tags](/../screenshots/tags.png?raw=true "Tags")
 
 # Features
 * Skips the official XCOM 2 / War of the Chosen launcher
@@ -18,6 +20,7 @@ This is an alternative launcher / mod manager for the game XCOM 2.
 * Profile loader will attempt to create groups if the profile contains groups
 * Launcher can be run on multiple computers (from Dropbox, etc) and carry all settings over (must reapply saved configs)
 * Editable mod descriptions
+* Customizable tags
 
 # Requirements
 * [.NET 4.6](https://www.microsoft.com/de-de/download/details.aspx?id=49981) (if you're on win 7, you might need to update)
@@ -32,7 +35,7 @@ You can use Tools > Import active mods for a quicker first time setup, if you wa
 Released under GPL, due to [objectlistview](http://objectlistview.sourceforge.net/cs/index.html).
 
 # Bug Reports
-If you encounter a bug, please leave a bug report [here](https://github.com/X2CommunityCore/xcom2-launcher/issues).
+If you encounter a bug, please leave a bug report [here](https://github.com/Xebeth/xcom2-launcher/issues).
 
 # Credit
 The XCOM 2 icon is property of Firaxis.
