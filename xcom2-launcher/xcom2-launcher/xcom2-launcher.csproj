@@ -100,6 +100,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>xcom2launcher.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FastColoredTextBox, Version=2.16.21.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
       <HintPath>..\packages\FCTB.2.16.21.0\lib\FastColoredTextBox.dll</HintPath>
@@ -258,6 +264,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="xcom2launcher.snk" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSteamworks.dll">
@@ -307,4 +314,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\GitVersionTask.3.6.5\build\dotnet\GitVersionTask.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\GitVersionTask.3.6.5\build\dotnet\GitVersionTask.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Windows Kits\10\bin\x64\signtool.exe" sign /f "$(CODE_SIGNING_CERT)" /p $(CODE_SIGNING_PWD) /t http://timestamp.verisign.com/scripts/timstamp.dll "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
