@@ -53,7 +53,7 @@ namespace XCOM2Launcher
                     {
                         client.Headers.Add("User-Agent: Other");
                         var regex = new Regex("[^0-9.]");
-                        var json = client.DownloadString("https://api.github.com/repos/X2CommunityCore/xcom2-launcher/releases/latest");
+                        var json = client.DownloadString("https://api.github.com/repos/Xebeth/xcom2-launcher/releases/latest");
                         var release = Newtonsoft.Json.JsonConvert.DeserializeObject<GitHub.Release>(json);
                         var currentVersion = new Version(regex.Replace(GetCurrentVersion(), ""));
                         var newVersion = new Version(regex.Replace(release.tag_name, ""));
